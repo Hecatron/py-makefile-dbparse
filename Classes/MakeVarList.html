@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>MakeVarList Class &#8212; py-makefile-dbparse</title>
+
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-4.3.1-dist/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxbootstrap4.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="../Examples/index.html" />
+    <link rel="prev" title="MakeTarget Class" href="MakeTarget.html" /> 
+  </head><body>
+  <nav class="navbar navbar-expand-md  fixed-top navbar-dark bg-dark flex-wrap">
+    <button class="navbar-toggler ml-auto py-2" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+      &#9776;
+    </button>
+      <div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+           <a class="navbar-brand py-1" href="../index.html">
+                  py-makefile-dbparse
+          </a>
+          <ul class="navbar-nav mr-auto">
+          
+              <li class="nav-item dropdown" id="navbar-pages">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                  <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="MakeFile.html">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeFile.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SimpleExample.html">Simple Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SconsExample.html">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+                  </ul>
+              </li>
+              <li class="nav-item">
+              <a  class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item">
+              
+                  <a  class="nav-link" href="http://example.com">Link</a></li>
+          </ul>
+          <div class="dropdown-divider d-block d-sm-none mb-4"></div>
+             
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <!--<div class="row hidden-sm-up">
+          <div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+              <div class="container">
+             　　 <a class="navbar-brand" href="../index.html">
+                      py-makefile-dbparse
+                  </a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li>
+                  <a  class="nav-link" href="../index.html">Home</a></li>
+                  <li>
+                  
+                      <a  class="nav-link" href="http://example.com">Link</a></li>
+              </ul>
+              <div class="dropdown-divider"></div>
+              <div class="navbar-text">search<div>
+              
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          </div>
+      </div>-->
+    </nav>
+  </div>
+
+    <div class="related d-flex justify-content-between bg-light flex-wrap" role="navigation" aria-label="related navigation">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">py-makefile-dbparse</a></li>
+                <li class="breadcrumb-item"><a href="index.html"
+                       
+                         accesskey="U"
+                         class="active"
+                       >Classes</a></li>
+            <li class="breadcrumb-item active">MakeVarList Class</li>
+        </ol>
+       <div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+               <a href="MakeTarget.html" title="Previous Chapter: MakeTarget Class" class="btn btn-primary" role="botton" accesskey="P">
+                   &laquo; MakeTarget Class
+               </a>
+               <a href="../Examples/index.html" title="Next Chapter: Examples" class="btn btn-primary" role="botton" accesskey="N">
+                   Examples &raquo;
+               </a>
+           </div>
+       </div>
+    </div>
+
+  <div class="main container-fluid">
+    <div class="row"> 
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="MakeFile.html">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeFile.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SimpleExample.html">Simple Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SconsExample.html">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            
+          
+  <div class="local-toc-heading">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  </div>
+  <div class="local-toc">
+  <ul>
+<li><a class="reference internal" href="#">MakeVarList Class</a><ul>
+<li><a class="reference internal" href="#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+<div id="searchbox" style="display: none">
+    <form class="form search" action="../search.html" method="get">
+      <input type="text" name="q" class="form-control" placeholder="Search..." />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+            
+            <hr />
+            <ul>
+                
+                <li class="toctree-l1"><a href="/genindex.html">Page index</a></li>
+                
+            </ul>
+            
+        </div>
+      </div> 
+
+      <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="makevarlist-class">
+<h1>MakeVarList Class<a class="headerlink" href="#makevarlist-class" title="Permalink to this headline">¶</a></h1>
+<p>The MakeVarList class acts as a collection of all the variables extracted from the Makefile</p>
+<div class="section" id="class-description">
+<h2>Class Description<a class="headerlink" href="#class-description" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="py_makefile_dbparse.vars.MakeVarList">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list"></span><em class="property">class </em><code class="sig-name descname">MakeVarList</code><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a collection of variables extracted from a Makefile. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="py_makefile_dbparse.vars.MakeVarList.__init__">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list_1a242596710ece25e4395374e129a5fc93"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">launcher launcher = None</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class initialiser. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launcher</span></code>: If a launcher is specified then we can use that for extracting more info later on. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.vars.MakeVarList.parse_vars">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list_1a203d60cdb59b53b53086253ad5adb116"></span><code class="sig-name descname">parse_vars</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">dbtxt dbtxt</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList.parse_vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the Makefile text database. </p>
+<p>Generate the (key,value) dict of all variables defined in make process.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The parsed variables. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbtxt</span></code>: The database text to use / parse. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.vars.MakeVarList.expand_var">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list_1a206c006235dfd0aa49703f558fb6391b"></span><code class="sig-name descname">expand_var</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">vals vals</em>, <em class="sig-param">usemake usemake = False</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList.expand_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand a given variable (or list of variables) within the Makefile database. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The expanded variable(s). </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vals</span></code>: A variable name, or list of variable names. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usemake</span></code>: if to use make to do the expansion. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.vars.MakeVarList.expand_expr">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list_1a65f85a77f723e4eaa44c2bf9f1013946"></span><code class="sig-name descname">expand_expr</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">vals vals</em>, <em class="sig-param">usemake usemake = False</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList.expand_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand a given expression (or list of expressions) within the Makefile database. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The expanded expression(s). </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vals</span></code>: An expression, or list of expressions. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usemake</span></code>: if to use make to do the expansion. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="attribute">
+<dt id="py_makefile_dbparse.vars.MakeVarList.values">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list_1aaf7aa5deedc636f8f536f83a032a655e"></span><code class="sig-name descname">values</code><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList.values" title="Permalink to this definition">¶</a></dt>
+<dd><p>The make database parsed as a collection of values. </p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="py_makefile_dbparse.vars.MakeVarList.launcher">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list_1a0c9832d6cb39532836c606f5ed58bd3a"></span><code class="sig-name descname">launcher</code><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList.launcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>If a launcher is specified then we can use that for extracting more info later on. </p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="py_makefile_dbparse.vars.MakeVarList.origin">
+<span class="target" id="classpy__makefile__dbparse_1_1vars_1_1_make_var_list_1a31f8ce0ab52efd144c1cfc805c1a02a8"></span><code class="sig-name descname">origin</code><a class="headerlink" href="#py_makefile_dbparse.vars.MakeVarList.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which variable types (origins) to include / look for. <p> ‘automatic’, ‘environment’, ‘default’, ‘override’, ‘makefile’. </p>
+<p> None returns all origins. The default is [‘environment’, ‘makefile’]. </p>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="clearer"></div>
+      </div>
+    </div>
+<footer class="footer d-flex justify-content-between flex-wrap">
+    <div class="copyright">
+        <div>&copy; Copyright 2019, Hecatrons Workshop.</div>
+      <div>Last updated on Oct 04, 2019.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+    </div>
+    <div>
+        <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>
+    </div>
+</footer>
+  </body>
+</html>

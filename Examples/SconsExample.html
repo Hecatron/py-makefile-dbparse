@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>SCons Example &#8212; py-makefile-dbparse</title>
+
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-4.3.1-dist/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxbootstrap4.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Simple Example" href="SimpleExample.html" /> 
+  </head><body>
+  <nav class="navbar navbar-expand-md  fixed-top navbar-dark bg-dark flex-wrap">
+    <button class="navbar-toggler ml-auto py-2" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+      &#9776;
+    </button>
+      <div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+           <a class="navbar-brand py-1" href="../index.html">
+                  py-makefile-dbparse
+          </a>
+          <ul class="navbar-nav mr-auto">
+          
+              <li class="nav-item dropdown" id="navbar-pages">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Classes/index.html">Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeFile.html">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeFile.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeVarList.html">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeVarList.html#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SimpleExample.html">Simple Example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+                  </ul>
+              </li>
+              <li class="nav-item">
+              <a  class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item">
+              
+                  <a  class="nav-link" href="http://example.com">Link</a></li>
+          </ul>
+          <div class="dropdown-divider d-block d-sm-none mb-4"></div>
+             
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <!--<div class="row hidden-sm-up">
+          <div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+              <div class="container">
+             　　 <a class="navbar-brand" href="../index.html">
+                      py-makefile-dbparse
+                  </a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li>
+                  <a  class="nav-link" href="../index.html">Home</a></li>
+                  <li>
+                  
+                      <a  class="nav-link" href="http://example.com">Link</a></li>
+              </ul>
+              <div class="dropdown-divider"></div>
+              <div class="navbar-text">search<div>
+              
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          </div>
+      </div>-->
+    </nav>
+  </div>
+
+    <div class="related d-flex justify-content-between bg-light flex-wrap" role="navigation" aria-label="related navigation">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">py-makefile-dbparse</a></li>
+                <li class="breadcrumb-item"><a href="index.html"
+                       
+                         accesskey="U"
+                         class="active"
+                       >Examples</a></li>
+            <li class="breadcrumb-item active">SCons Example</li>
+        </ol>
+       <div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+               <a href="SimpleExample.html" title="Previous Chapter: Simple Example" class="btn btn-primary" role="botton" accesskey="P">
+                   &laquo; Simple Example
+               </a>
+           </div>
+       </div>
+    </div>
+
+  <div class="main container-fluid">
+    <div class="row"> 
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Classes/index.html">Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeFile.html">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeFile.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeVarList.html">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeVarList.html#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SimpleExample.html">Simple Example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            
+          
+<div id="searchbox" style="display: none">
+    <form class="form search" action="../search.html" method="get">
+      <input type="text" name="q" class="form-control" placeholder="Search..." />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+            
+            <hr />
+            <ul>
+                
+                <li class="toctree-l1"><a href="/genindex.html">Page index</a></li>
+                
+            </ul>
+            
+        </div>
+      </div> 
+
+      <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="scons-example">
+<h1>SCons Example<a class="headerlink" href="#scons-example" title="Permalink to this headline">¶</a></h1>
+<p>One example is that we can use this library to extract information from a Makefile
+and then pass it onto scons to handle the build.</p>
+<p>On it’s own the below probably wouldn’t make that much sense since you’d be better off just rewritting the below purely for scons.
+But in the case of a much more complex build involving existing Makefiles it would make the porting process a bit easier
+if you were moving to something like Meson or Scons as a build system but didn’t want to move everything across all at once.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">SCons.Script</span>
+<span class="kn">from</span> <span class="nn">SCons.Environment</span> <span class="kn">import</span> <span class="n">Environment</span>
+<span class="kn">from</span> <span class="nn">py_linq</span> <span class="kn">import</span> <span class="n">Enumerable</span>
+<span class="kn">from</span> <span class="nn">py_makefile_dbparse.makefile</span> <span class="kn">import</span> <span class="n">MakeFile</span>
+
+<span class="c1"># Lets setup a construction environment</span>
+<span class="n">tgts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">EnsureSConsVersion</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">ENV</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;PATH&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PATH&#39;</span><span class="p">]})</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;win32&#39;</span><span class="p">:</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">AppendUnique</span><span class="p">(</span><span class="n">ENV</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;SystemDrive&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SystemDrive&#39;</span><span class="p">]})</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">AppendUnique</span><span class="p">(</span><span class="n">ENV</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;TEMP&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">]})</span>
+
+<span class="c1"># Lets read in the Makefile database</span>
+<span class="n">mk1</span> <span class="o">=</span> <span class="n">MakeFile</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">mk1</span><span class="o">.</span><span class="n">read_all</span><span class="p">()</span>
+<span class="c1"># Lets wrap the list of targets in a Enumerable so we can use py_linq on it</span>
+<span class="n">make_targets</span> <span class="o">=</span> <span class="n">Enumerable</span><span class="p">(</span><span class="n">mk1</span><span class="o">.</span><span class="n">targets</span><span class="p">)</span>
+
+<span class="c1"># Find the main program in the list of targets</span>
+<span class="n">make_prog</span> <span class="o">=</span> <span class="n">make_targets</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">target</span> <span class="o">==</span> <span class="s1">&#39;../build/hellomake&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">first_or_default</span><span class="p">()</span>
+<span class="c1"># Register the program with scons</span>
+<span class="n">scons_prog</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">Program</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">make_prog</span><span class="o">.</span><span class="n">target_noext</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">make_prog</span><span class="o">.</span><span class="n">sources</span><span class="p">)</span>
+<span class="c1"># Add scons program to list of targets we want to build</span>
+<span class="n">tgts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scons_prog</span><span class="p">)</span>
+
+<span class="c1"># Next lets find any target ending with .o</span>
+<span class="n">make_deps</span> <span class="o">=</span> <span class="n">make_targets</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.o&#39;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">dep_item</span> <span class="ow">in</span> <span class="n">make_deps</span><span class="p">:</span>
+    <span class="c1"># Create a Scons Object target for the item we&#39;ve found ending in .o</span>
+    <span class="n">scons_obj</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">dep_item</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">dep_item</span><span class="o">.</span><span class="n">sources_noheader</span><span class="p">)</span>
+    <span class="c1"># Add to the list of things we want to build</span>
+    <span class="n">tgts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scons_obj</span><span class="p">)</span>
+    <span class="c1"># This probably isn&#39;t needed since scons scans the source for dependencies but just in case</span>
+    <span class="c1"># Add a dependency here for the main program against the objects</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">Requires</span><span class="p">(</span><span class="n">scons_prog</span><span class="p">,</span> <span class="n">scons_obj</span><span class="p">)</span>
+
+<span class="n">env</span><span class="o">.</span><span class="n">Replace</span><span class="p">(</span><span class="n">CFLAGS</span><span class="o">=</span><span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_var</span><span class="p">(</span><span class="s1">&#39;CFLAGS&#39;</span><span class="p">))</span>
+
+<span class="c1"># Set our default targets to build when we don&#39;t specify anything at the command line</span>
+<span class="n">env</span><span class="o">.</span><span class="n">Default</span><span class="p">(</span><span class="n">tgts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="clearer"></div>
+      </div>
+    </div>
+<footer class="footer d-flex justify-content-between flex-wrap">
+    <div class="copyright">
+        <div>&copy; Copyright 2019, Hecatrons Workshop.</div>
+      <div>Last updated on Oct 04, 2019.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+    </div>
+    <div>
+        <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>
+    </div>
+</footer>
+  </body>
+</html>

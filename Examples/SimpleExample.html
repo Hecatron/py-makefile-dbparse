@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Simple Example &#8212; py-makefile-dbparse</title>
+
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-4.3.1-dist/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxbootstrap4.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SCons Example" href="SconsExample.html" />
+    <link rel="prev" title="Examples" href="index.html" /> 
+  </head><body>
+  <nav class="navbar navbar-expand-md  fixed-top navbar-dark bg-dark flex-wrap">
+    <button class="navbar-toggler ml-auto py-2" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+      &#9776;
+    </button>
+      <div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+           <a class="navbar-brand py-1" href="../index.html">
+                  py-makefile-dbparse
+          </a>
+          <ul class="navbar-nav mr-auto">
+          
+              <li class="nav-item dropdown" id="navbar-pages">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Classes/index.html">Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeFile.html">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeFile.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeVarList.html">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeVarList.html#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Simple Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SconsExample.html">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+                  </ul>
+              </li>
+              <li class="nav-item">
+              <a  class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item">
+              
+                  <a  class="nav-link" href="http://example.com">Link</a></li>
+          </ul>
+          <div class="dropdown-divider d-block d-sm-none mb-4"></div>
+             
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <!--<div class="row hidden-sm-up">
+          <div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+              <div class="container">
+             　　 <a class="navbar-brand" href="../index.html">
+                      py-makefile-dbparse
+                  </a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li>
+                  <a  class="nav-link" href="../index.html">Home</a></li>
+                  <li>
+                  
+                      <a  class="nav-link" href="http://example.com">Link</a></li>
+              </ul>
+              <div class="dropdown-divider"></div>
+              <div class="navbar-text">search<div>
+              
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          </div>
+      </div>-->
+    </nav>
+  </div>
+
+    <div class="related d-flex justify-content-between bg-light flex-wrap" role="navigation" aria-label="related navigation">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">py-makefile-dbparse</a></li>
+                <li class="breadcrumb-item"><a href="index.html"
+                       
+                         accesskey="U"
+                         class="active"
+                       >Examples</a></li>
+            <li class="breadcrumb-item active">Simple Example</li>
+        </ol>
+       <div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+               <a href="index.html" title="Previous Chapter: Examples" class="btn btn-primary" role="botton" accesskey="P">
+                   &laquo; Examples
+               </a>
+               <a href="SconsExample.html" title="Next Chapter: SCons Example" class="btn btn-primary" role="botton" accesskey="N">
+                   SCons Example &raquo;
+               </a>
+           </div>
+       </div>
+    </div>
+
+  <div class="main container-fluid">
+    <div class="row"> 
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Classes/index.html">Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeFile.html">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeFile.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Classes/MakeVarList.html">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classes/MakeVarList.html#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Simple Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SconsExample.html">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            
+          
+<div id="searchbox" style="display: none">
+    <form class="form search" action="../search.html" method="get">
+      <input type="text" name="q" class="form-control" placeholder="Search..." />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+            
+            <hr />
+            <ul>
+                
+                <li class="toctree-l1"><a href="/genindex.html">Page index</a></li>
+                
+            </ul>
+            
+        </div>
+      </div> 
+
+      <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="simple-example">
+<h1>Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h1>
+<p>For a basic example</p>
+<p>Lets load in the makefile and read the database</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">py_makefile_dbparse.makefile</span> <span class="kn">import</span> <span class="n">MakeFile</span>
+
+<span class="c1"># First lets load in a Makefile located in the src directory</span>
+<span class="c1"># relative to the current working directory</span>
+<span class="n">mk1</span> <span class="o">=</span> <span class="n">MakeFile</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">)</span>
+
+<span class="c1"># Lets run make and parse everything</span>
+<span class="n">mk1</span><span class="o">.</span><span class="n">read_all</span><span class="p">()</span>
+
+<span class="c1"># Results of the database output from make</span>
+<span class="n">dbtxt</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">dbtxt</span>
+</pre></div>
+</div>
+<p>One thing we can do is just read the contents of the Makefile</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the makefile text</span>
+<span class="n">mktxt</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">read_makefile</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>At this point we can now look at the make variables</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dictionary list of values</span>
+<span class="n">vars1</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Examples of expanding variables using the database extracted from make in memory</span>
+<span class="n">test1_1</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_var</span><span class="p">(</span><span class="s1">&#39;OBJ&#39;</span><span class="p">)</span>
+<span class="n">test1_2</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_var</span><span class="p">([</span><span class="s1">&#39;OBJ&#39;</span><span class="p">,</span> <span class="s1">&#39;DEPS&#39;</span><span class="p">,</span> <span class="s1">&#39;CFLAGS&#39;</span><span class="p">])</span>
+<span class="n">test1_3</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_expr</span><span class="p">(</span><span class="s1">&#39;$(OBJ) teststring&#39;</span><span class="p">)</span>
+<span class="n">test1_4</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_expr</span><span class="p">([</span><span class="s1">&#39;$(OBJ) teststring&#39;</span><span class="p">,</span> <span class="s1">&#39;$(DEPS) teststring2&#39;</span><span class="p">])</span>
+
+<span class="c1"># Examples of expanding variables using make to output the results via an info target</span>
+<span class="n">test2_1</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_var</span><span class="p">(</span><span class="s1">&#39;OBJ&#39;</span><span class="p">,</span> <span class="n">usemake</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">test2_2</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_var</span><span class="p">([</span><span class="s1">&#39;OBJ&#39;</span><span class="p">,</span> <span class="s1">&#39;DEPS&#39;</span><span class="p">,</span> <span class="s1">&#39;CFLAGS&#39;</span><span class="p">],</span> <span class="n">usemake</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">test2_3</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_expr</span><span class="p">(</span><span class="s1">&#39;$(OBJ) teststring&#39;</span><span class="p">,</span> <span class="n">usemake</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">test2_4</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_expr</span><span class="p">([</span><span class="s1">&#39;$(OBJ) teststring&#39;</span><span class="p">,</span> <span class="s1">&#39;$(DEPS) teststring2&#39;</span><span class="p">],</span> <span class="n">usemake</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># The first line won&#39;t be able to handle make functions, the second can but is slower</span>
+<span class="n">test3_1</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_expr</span><span class="p">(</span><span class="s1">&#39;$(patsubst %,$(IDIR)/%,$(_DEPS))&#39;</span><span class="p">)</span>
+<span class="n">test3_2</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_expr</span><span class="p">(</span><span class="s1">&#39;$(patsubst %,$(IDIR)/%,$(_DEPS))&#39;</span><span class="p">,</span> <span class="n">usemake</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can also get a view of the targets</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Targets</span>
+<span class="n">tgts</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">targets</span>
+<span class="n">test3_1</span> <span class="o">=</span> <span class="n">tgts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">test3_2</span> <span class="o">=</span> <span class="n">tgts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">target</span>
+<span class="n">test3_3</span> <span class="o">=</span> <span class="n">tgts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sources</span>
+<span class="n">test3_4</span> <span class="o">=</span> <span class="n">tgts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cmds_raw</span>
+<span class="n">test3_5</span> <span class="o">=</span> <span class="n">tgts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cmds_expand</span><span class="p">()</span>
+<span class="n">test3_6</span> <span class="o">=</span> <span class="n">tgts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cmds_expand</span><span class="p">(</span><span class="n">usemake</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="clearer"></div>
+      </div>
+    </div>
+<footer class="footer d-flex justify-content-between flex-wrap">
+    <div class="copyright">
+        <div>&copy; Copyright 2019, Hecatrons Workshop.</div>
+      <div>Last updated on Oct 04, 2019.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+    </div>
+    <div>
+        <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>
+    </div>
+</footer>
+  </body>
+</html>

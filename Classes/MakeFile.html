@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>MakeFile Class &#8212; py-makefile-dbparse</title>
+
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-4.3.1-dist/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxbootstrap4.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MakeLauncher Class" href="MakeLauncher.html" />
+    <link rel="prev" title="Classes" href="index.html" /> 
+  </head><body>
+  <nav class="navbar navbar-expand-md  fixed-top navbar-dark bg-dark flex-wrap">
+    <button class="navbar-toggler ml-auto py-2" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+      &#9776;
+    </button>
+      <div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+           <a class="navbar-brand py-1" href="../index.html">
+                  py-makefile-dbparse
+          </a>
+          <ul class="navbar-nav mr-auto">
+          
+              <li class="nav-item dropdown" id="navbar-pages">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                  <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeVarList.html">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeVarList.html#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SimpleExample.html">Simple Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SconsExample.html">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+                  </ul>
+              </li>
+              <li class="nav-item">
+              <a  class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item">
+              
+                  <a  class="nav-link" href="http://example.com">Link</a></li>
+          </ul>
+          <div class="dropdown-divider d-block d-sm-none mb-4"></div>
+             
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <!--<div class="row hidden-sm-up">
+          <div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+              <div class="container">
+             　　 <a class="navbar-brand" href="../index.html">
+                      py-makefile-dbparse
+                  </a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li>
+                  <a  class="nav-link" href="../index.html">Home</a></li>
+                  <li>
+                  
+                      <a  class="nav-link" href="http://example.com">Link</a></li>
+              </ul>
+              <div class="dropdown-divider"></div>
+              <div class="navbar-text">search<div>
+              
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          </div>
+      </div>-->
+    </nav>
+  </div>
+
+    <div class="related d-flex justify-content-between bg-light flex-wrap" role="navigation" aria-label="related navigation">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">py-makefile-dbparse</a></li>
+                <li class="breadcrumb-item"><a href="index.html"
+                       
+                         accesskey="U"
+                         class="active"
+                       >Classes</a></li>
+            <li class="breadcrumb-item active">MakeFile Class</li>
+        </ol>
+       <div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+               <a href="index.html" title="Previous Chapter: Classes" class="btn btn-primary" role="botton" accesskey="P">
+                   &laquo; Classes
+               </a>
+               <a href="MakeLauncher.html" title="Next Chapter: MakeLauncher Class" class="btn btn-primary" role="botton" accesskey="N">
+                   MakeLauncher Class &raquo;
+               </a>
+           </div>
+       </div>
+    </div>
+
+  <div class="main container-fluid">
+    <div class="row"> 
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MakeFile Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeLauncher.html">MakeLauncher Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeLauncher.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeTarget.html">MakeTarget Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeTarget.html#class-description">Class Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MakeVarList.html">MakeVarList Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MakeVarList.html#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SimpleExample.html">Simple Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/SconsExample.html">SCons Example</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            
+          
+  <div class="local-toc-heading">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  </div>
+  <div class="local-toc">
+  <ul>
+<li><a class="reference internal" href="#">MakeFile Class</a><ul>
+<li><a class="reference internal" href="#class-description">Class Description</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+<div id="searchbox" style="display: none">
+    <form class="form search" action="../search.html" method="get">
+      <input type="text" name="q" class="form-control" placeholder="Search..." />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+            
+            <hr />
+            <ul>
+                
+                <li class="toctree-l1"><a href="/genindex.html">Page index</a></li>
+                
+            </ul>
+            
+        </div>
+      </div> 
+
+      <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="makefile-class">
+<h1>MakeFile Class<a class="headerlink" href="#makefile-class" title="Permalink to this headline">¶</a></h1>
+<p>The MakeFile class acts as a representation of a single Makefile on the filesystem.
+Typically you create one of these as a starting point and the other class’s are created underneath automatically during the parsing of the Makefile</p>
+<p>As a basic example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">py_makefile_dbparse.makefile</span> <span class="kn">import</span> <span class="n">MakeFile</span>
+
+<span class="c1"># Read in the Makefile from the src directory underneath the current working directory</span>
+<span class="n">mk1</span> <span class="o">=</span> <span class="n">MakeFile</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">)</span>
+
+<span class="c1"># Read in / parse the make database output</span>
+<span class="n">mk1</span><span class="o">.</span><span class="n">read_db</span><span class="p">()</span>
+
+<span class="c1"># Parse everything from the database text</span>
+<span class="n">mk1</span><span class="o">.</span><span class="n">read_all</span><span class="p">()</span>
+
+<span class="c1"># Expand a variable</span>
+<span class="n">expanded_var</span> <span class="o">=</span> <span class="n">mk1</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">expand_var</span><span class="p">(</span><span class="s1">&#39;OBJ&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="class-description">
+<h2>Class Description<a class="headerlink" href="#class-description" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="py_makefile_dbparse.makefile.MakeFile">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file"></span><em class="property">class </em><code class="sig-name descname">MakeFile</code><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a Makefile database. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="py_makefile_dbparse.makefile.MakeFile.__init__">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1afeaa38c79d8cd35cc1d9112304eb5493"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">makefile_path makefile_path</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class initialiser. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">makefile_path</span></code>: The path to the Makefile (file or directory). </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.makefile.MakeFile.read_db">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1ab0c7c270ea4e7ad02c1cc1b014b62480"></span><code class="sig-name descname">read_db</code><span class="sig-paren">(</span><em class="sig-param">self self</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.read_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read in the Makefile database as text. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The Makefile database as text. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.makefile.MakeFile.dump_db">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1a0d5891eed6d8cb97ea7c01ec7e7c7dfb"></span><code class="sig-name descname">dump_db</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">filepath filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.dump_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the Makefile database output as a text file. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">filepath</span></code>: The path to the file to write to. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.makefile.MakeFile.parse_targets">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1a597ad0670fe5b5eac9a88de93e671e46"></span><code class="sig-name descname">parse_targets</code><span class="sig-paren">(</span><em class="sig-param">self self</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.parse_targets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a list of all targets defined in the make process. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The targets parsed from the Makefile database. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.makefile.MakeFile.parse_vars">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1a8b2d38e7cd47d7744237d7e7549aa454"></span><code class="sig-name descname">parse_vars</code><span class="sig-paren">(</span><em class="sig-param">self self</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.parse_vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the (key,value) dict of all variables defined in the make process. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The (key,value) dict of all variables defined in the make process. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="py_makefile_dbparse.makefile.MakeFile.read_all">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1a8391b785afd132c0582ca10e2e17a8c7"></span><code class="sig-name descname">read_all</code><span class="sig-paren">(</span><em class="sig-param">self self</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.read_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read / Parse all from the Makefile database. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="attribute">
+<dt id="py_makefile_dbparse.makefile.MakeFile.makefile_path">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1ad6a1de2da1c185ac02b0ae3af98dc97d"></span><code class="sig-name descname">makefile_path</code><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.makefile_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to the Makefile (file or directory). </p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="py_makefile_dbparse.makefile.MakeFile.launcher">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1a2573b3a25c0ccd5062f77cca2ca05617"></span><code class="sig-name descname">launcher</code><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.launcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>The launcher used for running make. </p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="py_makefile_dbparse.makefile.MakeFile.dbtxt">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1acfcff254b430f30675ce4ba284b74cc1"></span><code class="sig-name descname">dbtxt</code><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.dbtxt" title="Permalink to this definition">¶</a></dt>
+<dd><p>The result of a dump of the Makefile database as text. </p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="py_makefile_dbparse.makefile.MakeFile.targets">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1a2124b085975a0b7dd7396efbc7b67537"></span><code class="sig-name descname">targets</code><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.targets" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Makefile targets. </p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="py_makefile_dbparse.makefile.MakeFile.vars">
+<span class="target" id="classpy__makefile__dbparse_1_1makefile_1_1_make_file_1a619dad9b3b083abf47adb1ea035b901c"></span><code class="sig-name descname">vars</code><a class="headerlink" href="#py_makefile_dbparse.makefile.MakeFile.vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of variables within the makefile. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="clearer"></div>
+      </div>
+    </div>
+<footer class="footer d-flex justify-content-between flex-wrap">
+    <div class="copyright">
+        <div>&copy; Copyright 2019, Hecatrons Workshop.</div>
+      <div>Last updated on Oct 04, 2019.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+    </div>
+    <div>
+        <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>
+    </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+/* Make the page full width */
+.container-fluid {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Hide the Table of Contents on the main page, just have it visible in the sidebar */
+#mastertoc {
+    display: none;
+}
+
+/* Hide duplicate heading */
+.local-toc-heading {
+    display: none;
+}
+
+/* code block formatting */
+dl.function {
+    margin-left: 20px;
+	text-indent: 50px;
+}
+dl.attribute {
+    margin-left: 20px;
+	text-indent: 50px;
+}
