@@ -1,0 +1,10 @@
+# Ignore tox dirs
+.tox-dev/
+.tox-tests/
+
+# Ignore python virtual environment directory
+py37dev/
+py37docs/
+
+# For when we want to use a source version of scons
+scons/

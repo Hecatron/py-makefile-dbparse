@@ -1,0 +1,5 @@
+recursive-include scons_gbd_builders *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.py.j2
+recursive-exclude * SConscript.py

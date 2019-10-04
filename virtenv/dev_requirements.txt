@@ -1,0 +1,25 @@
+yasha
+scons
+pep8
+pycodestyle
+pylint
+# 5.0.1 required for vscode compatibility - https://github.com/microsoft/vscode-python/issues/6990
+pytest<=5.0.1
+pytest-cov
+pytest-codestyle
+pytest-colordots
+pytest-runner
+flake8
+coverage
+pyflakes
+py-linq
+sphinx
+
+recommonmark
+sphinx-markdown-tables
+sphinx-autobuild
+sphinx-issues
+breathe
+ghp-import
+doxypypy
+git+https://github.com/bashtage/sphinx-material.git

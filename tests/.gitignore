@@ -1,0 +1,2 @@
+# Temporary directory used for building out source during tests
+/build-temp/
