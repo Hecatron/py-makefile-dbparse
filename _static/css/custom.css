@@ -14,6 +14,11 @@
     display: none;
 }
 
+/* top gap */
+.related {
+    margin-top: 70px;
+}
+
 /* code block formatting */
 dl.function {
     margin-left: 20px;
@@ -22,4 +27,7 @@ dl.function {
 dl.attribute {
     margin-left: 20px;
 	text-indent: 50px;
+}
+.highlight {
+    background-color: transparent;
 }
