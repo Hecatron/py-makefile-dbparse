@@ -43,7 +43,7 @@ html_theme_options = {
     # False indicates path of pages in the document.
     'navbar_links' : [
          ('Github', 'https://github.com/Hecatron/py-makefile-dbparse', True),
-         ("Page Index", "/genindex", False),
+         ("Page Index", "genindex", False),
          ("Blog", "https://www.hecatron.com/doku.php", True),
     ],
 
