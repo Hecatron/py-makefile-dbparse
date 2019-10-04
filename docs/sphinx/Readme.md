@@ -79,15 +79,8 @@ make.py publish
   * https://github.com/sphinx-doc/sphinx/blob/master/sphinx/themes/basic/layout.html
     When writing custom themes, these are the pages inherited from as a base
 
-Documenting Code
+### Documenting Code
 
   * https://github.com/Feneric/doxypypy/tree/master/doxypypy/test
   * https://jamwheeler.com/college-productivity/how-to-write-beautiful-code-documentation/
   * https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
-
-## TODO
-
-  * under _templates add a custom sidebar page with bootstrap icons / global toc / local toc
-  * link to github / blog / etc
-  * Test build scripts under linux
-  * setup.py

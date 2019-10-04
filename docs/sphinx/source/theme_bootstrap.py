@@ -19,12 +19,12 @@ html_theme_options = {
 
     # Navbar link color modifier class.
     # Values: 'dark', 'light' (Default: 'dark')
-    #'navbar_color_class' : 'dark',
+    #'navbar_color_class' : 'light',
 
     # Navbar background color class.
     # Values: 'inverse', 'primary', 'faded', 'success',
     #         'info', 'warning', 'danger' (Default: 'inverse')
-    #'navbar_bg_class' : 'inverse',
+    #'navbar_bg_class' : 'info',
 
     # Show global TOC in navbar.
     # To display up to 4 tier in the drop-down menu.
@@ -42,8 +42,9 @@ html_theme_options = {
     # True indicates an external link.
     # False indicates path of pages in the document.
     'navbar_links' : [
-         ('Home', 'index', False),
-         ("Link", "http://example.com", True)
+         ('Github', 'index', False),
+         ("Page Index", "/genindex.html", True),
+         ("Blog", "https://www.hecatron.com/doku.php", True),
     ],
 
     # Total width(%) of the document and the sidebar.
@@ -64,19 +65,24 @@ html_theme_options = {
 
     # Html table header class.
     # Values: 'inverse', 'light' (Default: 'inverse')
-    #'table_thead_class' : 'inverse'
+    #'table_thead_class' : 'light',
 
     # Bootswatch color theme
 	# (Default: 'None')
     'bootswatch': 'flatly',
 
-    'extra_nav_links': {'Page index':'/genindex.html'},
+    #'extra_nav_links': {'Page index':'/genindex.html'},
 }
+
+# Pygments color theme for code
+#pygments_style = 'monokai'
+#pygments_style = 'solarized-dark'
 
 html_css_files = [
     'css/custom.css',
+    'css/customtoc_bootstrap.css'
 ]
 
 html_sidebars = {
-    '**': ['globaltoc.html','localtoc.html','searchbox.html']
+    '**': ['globaltoc.html','localtoc.html','customtoc_bootstrap.html', 'searchbox.html']
 }
