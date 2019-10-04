@@ -42,8 +42,8 @@ html_theme_options = {
     # True indicates an external link.
     # False indicates path of pages in the document.
     'navbar_links' : [
-         ('Github', 'index', False),
-         ("Page Index", "/genindex.html", True),
+         ('Github', 'https://github.com/Hecatron/py-makefile-dbparse', True),
+         ("Page Index", "/genindex", False),
          ("Blog", "https://www.hecatron.com/doku.php", True),
     ],
 
