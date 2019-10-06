@@ -36,6 +36,9 @@ class MakeLauncher(object):
 
     def run(self, localopts, stdin_txt=None):
         '''Launches make.
+        Args:
+            localopts: additional command line options to pass to make.
+            stdin_txt: text to pass to the standard input of the make process.
         Returns:
             The stdout from make.
         '''

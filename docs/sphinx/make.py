@@ -85,6 +85,8 @@ class SphinxBuild(object):
     def run_doxygen(self):
         '''Regenerate the xml files exported from doxygen, these are used by sphinx'''
         self.run_cmd(['doxygen'], self.DOXYGENDIR)
+        # Filter the xml for the types of parameters
+        self.run_cmd(['python', 'filter_types.py'], self.DOXYGENDIR)
 
     def run_sphinxbuild(self, args):
         '''Assuming one of the commands here isn't needed, instead pass the arguments to sphinx-build'''
