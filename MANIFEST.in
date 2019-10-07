@@ -1,5 +1,5 @@
-recursive-include py_makefile_dbparse *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff
+include Readme.md
+include LICENSE
+recursive-include py_makefile_dbparse *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff *.woff2 *.xml *.mustache
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
-recursive-exclude * *.py.j2
-recursive-exclude * sconscript.py

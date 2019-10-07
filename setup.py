@@ -4,14 +4,14 @@ import os
 import sys
 import re
 from setuptools import setup
-from codecs import open  # To use a consistent encoding
+from codecs import open
 from os import path
-from pypandoc import convert
+from pypandoc import convert_file
 
 def get_long_description(package):
     try:
-        readme = convert('Readme.md', 'rst', format='markdown_github')
-        change_log = convert('Changelog.md', 'rst', format='markdown_github')
+        readme = convert_file('Readme.md', 'rst', format='markdown_github')
+        change_log = convert_file('Changelog.md', 'rst', format='markdown_github')
         long_description = readme + '\n\n' + change_log
     except:
         currentdir = path.abspath(path.dirname(__file__))

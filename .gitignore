@@ -96,7 +96,10 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/python
 
+# setup.py build
+/build
+/.vscode/temp
+!/.vscode/temp/placeholder.txt
 
 # scons files
 .sconsign.dblite
-/.vscode/temp
