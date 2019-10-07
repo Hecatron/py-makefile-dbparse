@@ -2,11 +2,11 @@
 Theme settings
 '''
 
-#import sphinxbootstrap4theme
+import sphinxbootstrap4theme
 
 html_theme = 'sphinxbootstrap4theme'
-#html_theme_path = [sphinxbootstrap4theme.get_path()]
-html_theme_path = ['D://SourceCode//GitRepos.Forks//sphinxbootstrap4theme//themes']
+html_theme_path = [sphinxbootstrap4theme.get_path()]
+#html_theme_path = ['D://SourceCode//GitRepos.Forks//sphinxbootstrap4theme//themes']
 
 # Html logo in navbar.
 # Fit in the navbar at the height of image is 37 px.

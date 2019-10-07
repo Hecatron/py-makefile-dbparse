@@ -52,7 +52,7 @@ def test_expand_var():
     assert test1['CFLAGS'] == '-Iinclude'
     assert test1['LIBS'] == '-lm'
     test2 = mk1.vars.expand_var('CFLAGS')
-    assert test2['CFLAGS'] == '-Iinclude'
+    assert test2 == '-Iinclude'
 
 
 def test_expand_expr():
@@ -83,7 +83,7 @@ def test_expand_var_usemake():
     assert test1['DEPS'] == 'include/hellomake.h'
     assert test1['CFLAGS'] == '-Iinclude'
     test2 = mk1.vars.expand_var('DEPS', usemake=True)
-    assert test2['DEPS'] == 'include/hellomake.h'
+    assert test2 == 'include/hellomake.h'
 
 
 def test_expand_expr_usemake():

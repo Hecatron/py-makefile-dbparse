@@ -1,9 +1,8 @@
 '''Setup file'''
 
-# TODO
-# 1. depends
-
 import os
+import sys
+import re
 from setuptools import setup
 from codecs import open  # To use a consistent encoding
 from os import path
@@ -22,14 +21,14 @@ def get_long_description(package):
 
 def get_version(package):
     '''Return package version as listed in `__version__` in `init.py`.'''
-    init_py = open(os.path.join(package, '__init__.py')).read()
+    init_py = open(path.join(package, '__init__.py')).read()
     return re.search("__version__ = ['\"]([^'\"]+)['\"]", init_py).group(1)
 
 def get_packages(package):
     '''Return root package and all sub-packages.'''
     return [dirpath
             for dirpath, dirnames, filenames in os.walk(package)
-            if os.path.exists(os.path.join(dirpath, '__init__.py'))]
+            if path.exists(path.join(dirpath, '__init__.py'))]
 
 if sys.argv[-1] == 'publish':
     if os.system("pip freeze | grep wheel"):
@@ -57,7 +56,7 @@ setup(
     packages=get_packages('py_makefile_dbparse'),
     include_package_data=True,
     install_requires=[
-        "mkdocs>=0.16.3",
+        "py-linq>=1.0.1",
     ],
     python_requires='>=3.0.0,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*',
     classifiers=[
@@ -80,6 +79,7 @@ setup(
     keywords="pip package, scons, makefile, make",
     setup_requires=[
         'pytest-runner',
+        'pypandoc'
     ],
     tests_require=[
         'pytest-cov',
