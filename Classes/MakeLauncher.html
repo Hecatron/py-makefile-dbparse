@@ -255,7 +255,7 @@ To give an example of extracting the make database in the current directory.</p>
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="py_makefile_dbparse.launcher.MakeLauncher.__init__">
-<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1ac72719deea712238ef68c7253afb9bc4"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">cmd cmd = 'make'</em>, <em class="sig-param">opts opts = ''</em>, <em class="sig-param">makefile makefile = 'Makefile'</em>, <em class="sig-param">workdir workdir = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1ac72719deea712238ef68c7253afb9bc4"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">cmd = 'make'</em>, <em class="sig-param">opts = ''</em>, <em class="sig-param">makefile = 'Makefile'</em>, <em class="sig-param">workdir = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class initialiser. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -271,10 +271,15 @@ To give an example of extracting the make database in the current directory.</p>
 
 <dl class="function">
 <dt id="py_makefile_dbparse.launcher.MakeLauncher.run">
-<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1ac711964968217a89c07f49db8c0ec5d0"></span><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">localopts localopts</em>, <em class="sig-param">stdin_txt stdin_txt = None</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.run" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1ac711964968217a89c07f49db8c0ec5d0"></span><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">localopts</em>, <em class="sig-param">stdin_txt = None</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Launches make. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The stdout from make. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">localopts</span></code>: additional command line options to pass to make. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdin_txt</span></code>: text to pass to the standard input of the make process. </p></li>
+</ul>
 </dd>
 </dl>
 </p>
@@ -282,7 +287,7 @@ To give an example of extracting the make database in the current directory.</p>
 
 <dl class="function">
 <dt id="py_makefile_dbparse.launcher.MakeLauncher.read_makefile">
-<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1a88b90848e849e5fd6d02d58f3dfae551"></span><code class="sig-name descname">read_makefile</code><span class="sig-paren">(</span><em class="sig-param">self self</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.read_makefile" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1a88b90848e849e5fd6d02d58f3dfae551"></span><code class="sig-name descname">read_makefile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.read_makefile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads the content of a Makefile referenced by the class. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The text of the Makefile. </p>
@@ -293,7 +298,7 @@ To give an example of extracting the make database in the current directory.</p>
 
 <dl class="function">
 <dt id="py_makefile_dbparse.launcher.MakeLauncher.write_makefile">
-<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1a517f3f9f8800e3ddf89374cd0f3c7d37"></span><code class="sig-name descname">write_makefile</code><span class="sig-paren">(</span><em class="sig-param">self self</em>, <em class="sig-param">contents contents</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.write_makefile" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classpy__makefile__dbparse_1_1launcher_1_1_make_launcher_1a517f3f9f8800e3ddf89374cd0f3c7d37"></span><code class="sig-name descname">write_makefile</code><span class="sig-paren">(</span><em class="sig-param">contents</em><span class="sig-paren">)</span><a class="headerlink" href="#py_makefile_dbparse.launcher.MakeLauncher.write_makefile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes the given content to the Makefile referenced by the class. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -360,7 +365,7 @@ To give an example of extracting the make database in the current directory.</p>
 <footer class="footer d-flex justify-content-between flex-wrap">
     <div class="copyright">
         <div>&copy; Copyright 2019, Hecatrons Workshop.</div>
-      <div>Last updated on Oct 04, 2019.</div>
+      <div>Last updated on Oct 07, 2019.</div>
       <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
     </div>
     <div>
