@@ -11,3 +11,5 @@ See the main documentation here
 ## TODO
 
   * Test build scripts under linux
+  * install make under travis
+  * tag a release

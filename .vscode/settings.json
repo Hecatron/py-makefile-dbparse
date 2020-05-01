@@ -5,8 +5,8 @@
     "python.venvPath": "${workspaceFolder}/virtenv",
     // Additional autocompletion search directories
     "python.autoComplete.extraPaths": [
-        "${workspaceFolder}/",
-        "${workspaceFolder}/virtenv/py37dev/Lib/site-packages/scons"
+        "./",
+        "./virtenv/py37dev/Lib/site-packages/scons"
     ],
 
     // Use pytest for testing
@@ -19,9 +19,9 @@
     "python.linting.enabled": true,
 
     // Pep8 linting
-    "python.linting.pep8Enabled": true,
-    "python.linting.pep8Path": "${workspaceFolder}/virtenv/py37dev/Scripts/pycodestyle",
-    "python.linting.pep8Args": ["--ignore","E501,E265,E266"],
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pycodestylePath": "${workspaceFolder}/virtenv/py37dev/Scripts/pycodestyle",
+    "python.linting.pycodestyleArgs": ["--ignore","E501,E265,E266"],
 
     // pylint linting
     "python.linting.pylintEnabled": false,

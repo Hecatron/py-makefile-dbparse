@@ -8,6 +8,10 @@ from codecs import open
 from os import path
 from pypandoc import convert_file
 
+package_name = 'py_makefile_dbparse'
+package_name_dash = 'py-makefile-dbparse'
+
+
 def get_long_description(package):
     try:
         readme = convert_file('Readme.md', 'rst', format='markdown_github')
@@ -19,16 +23,19 @@ def get_long_description(package):
             long_description = f.read()
     return long_description
 
+
 def get_version(package):
     '''Return package version as listed in `__version__` in `init.py`.'''
     init_py = open(path.join(package, '__init__.py')).read()
     return re.search("__version__ = ['\"]([^'\"]+)['\"]", init_py).group(1)
+
 
 def get_packages(package):
     '''Return root package and all sub-packages.'''
     return [dirpath
             for dirpath, dirnames, filenames in os.walk(package)
             if path.exists(path.join(dirpath, '__init__.py'))]
+
 
 if sys.argv[-1] == 'publish':
     if os.system("pip freeze | grep wheel"):
@@ -40,20 +47,20 @@ if sys.argv[-1] == 'publish':
     os.system("python setup.py sdist bdist_wheel")
     os.system("twine upload dist/*")
     print("You probably want to also tag the version now:")
-    print("  git tag -a {0} -m 'version {0}'".format(get_version('py_makefile_dbparse')))
+    print("  git tag -a {0} -m 'version {0}'".format(get_version(package_name)))
     print("  git push --tags")
     sys.exit()
 
 setup(
-    name='py-makefile-dbparse',
-    version=get_version('py_makefile_dbparse'),
-    url='http://Hecatron.github.io/py-makefile-dbparse',
+    name=package_name_dash,
+    version=get_version(package_name),
+    url='http://Hecatron.github.io/' + package_name_dash,
     license='MIT License',
     description='Tool for extracting information from Makefiles for use with python build systems.',
-    long_description=get_long_description('py_makefile_dbparse'),
+    long_description=get_long_description(package_name),
     author='hecatrons.workshop@gmail.com',
     author_email='hecatrons.workshop@gmail.com',
-    packages=get_packages('py_makefile_dbparse'),
+    packages=get_packages(package_name),
     include_package_data=True,
     install_requires=[
         "py-linq>=1.0.1",
